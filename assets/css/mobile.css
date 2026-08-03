@@ -1,0 +1,255 @@
+/*
+ * GF Sistemas de Segurança — layout exclusivo para celular e tablet.
+ * Este arquivo é carregado depois do CSS principal e não altera o desktop.
+ */
+@media (max-width: 991.98px) {
+  html {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-padding-top: 70px;
+  }
+  body,
+  body.site-shell {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  body.site-shell::before { width: 100%; max-width: 100%; }
+  .header,
+  main,
+  .hero,
+  .band,
+  .section,
+  .cta-section,
+  .footer {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .header__inner,
+  .hero__grid,
+  .hero__content,
+  .hero__trust,
+  .hero__trust-inner,
+  .service-grid,
+  .product-grid,
+  .split,
+  .partner,
+  .stats,
+  .faq-wrap,
+  .cta-box,
+  .footer__main { min-width: 0; max-width: 100%; }
+
+  .topbar { display: none; }
+  .container-gf {
+    width: calc(100% - 32px);
+    max-width: 720px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .section { padding: 72px 0; }
+  .section--tight { padding: 54px 0; }
+  .section-title {
+    font-size: clamp(2.35rem, 10vw, 4.25rem);
+    line-height: .98;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+  .section-lead { margin-top: 20px; font-size: 1rem; line-height: 1.7; }
+
+  .header { height: 70px; }
+  .header__inner { min-height: 70px; }
+  .brand { min-width: 0; gap: 9px; }
+  .brand__shield { width: 38px; height: 44px; font-size: 1.08rem; }
+  .brand__name { max-width: 185px; font-size: .92rem; line-height: 1.08; }
+  .header__inner > .btn-gf { display: none !important; }
+  .menu-toggle {
+    display: grid;
+    flex: 0 0 46px;
+    place-items: center;
+    border-radius: 0;
+  }
+  .nav-desktop {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    left: 0;
+    display: grid;
+    max-height: calc(100dvh - 70px);
+    gap: 0;
+    padding: 10px 20px 22px;
+    overflow-y: auto;
+    border-bottom: 1px solid var(--gf-line);
+    background: rgba(8, 9, 10, .99);
+    box-shadow: 0 22px 45px rgba(0, 0, 0, .45);
+    transform: translateY(-130%);
+    visibility: hidden;
+    transition: transform .28s ease, visibility .28s;
+  }
+  .nav-desktop.open { transform: translateY(0); visibility: visible; }
+  .nav-desktop a {
+    padding: 16px 8px;
+    border-bottom: 1px solid var(--gf-line);
+    font-size: .95rem;
+  }
+  .nav-desktop a:last-child { border-bottom: 0; }
+  .nav-desktop a::after { display: none; }
+
+  /* Hero mobile: imagem e conteúdo passam a ter áreas próprias. */
+  .hero {
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+    overflow: visible;
+    background: #08090a;
+  }
+  .hero__media,
+  body[data-page="inicio"] .hero__media {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: clamp(270px, 72vw, 440px);
+    order: 1;
+    clip-path: none;
+  }
+  .hero__media::before {
+    background: linear-gradient(0deg, #08090a 0%, rgba(8, 9, 10, .12) 42%, transparent 72%);
+  }
+  .hero__media img,
+  body[data-page="inicio"] .hero__media img {
+    width: 100%;
+    height: 100%;
+    object-position: 68% center;
+  }
+  body[data-page="inicio"] .hero__media img { object-position: 72% center; }
+  body[data-page="cameras"] .hero__media img { object-position: 70% center; }
+  body[data-page="motores"] .hero__media img { object-position: 73% center; }
+  .hero__grid {
+    min-height: 0;
+    order: 2;
+  }
+  .hero__content {
+    width: 100%;
+    max-width: none;
+    padding: 30px 0 36px;
+  }
+  .hero__coord { margin-bottom: 19px; font-size: .67rem; line-height: 1.5; }
+  .hero h1 {
+    max-width: 660px;
+    margin-bottom: 20px;
+    font-size: clamp(2.3rem, 10.5vw, 4.35rem);
+    line-height: .91;
+    overflow-wrap: normal;
+    word-break: normal;
+    text-wrap: balance;
+  }
+  .hero h1::after { width: 36px; height: 5px; margin-top: 21px; }
+  .hero p { max-width: 620px; margin-bottom: 26px; font-size: 1rem; line-height: 1.62; }
+  .hero__actions { display: grid; grid-template-columns: 1fr; gap: 12px; }
+  .hero__actions .btn-gf { width: 100%; min-height: 54px; }
+  .hero__trust { position: relative; right: auto; bottom: auto; left: auto; order: 3; }
+  .hero__trust-inner {
+    width: 100%;
+    grid-template-columns: 1fr;
+    border-right: 0;
+    border-left: 0;
+    clip-path: none;
+  }
+  .trust-item { min-height: 74px; justify-content: flex-start; padding: 14px 20px; }
+  .trust-item + .trust-item { border-top: 1px solid var(--gf-line); border-left: 0; }
+  .trust-item i { width: 32px; font-size: 1.4rem; text-align: center; }
+
+  .band__item { padding: 15px 22px; font-size: .86rem; }
+  .service-grid,
+  .product-grid { grid-template-columns: 1fr; gap: 14px; margin-top: 34px; }
+  .service-card { min-height: 0; padding: 28px 24px; }
+  .service-card__number { font-size: 3.8rem; }
+  .service-card__icon { width: 52px; height: 52px; margin-bottom: 25px; }
+  .service-card h3 { font-size: 1.45rem; }
+
+  .split { grid-template-columns: 1fr; gap: 38px; }
+  .split__content { order: -1; }
+  .split__media img { min-height: 0; height: clamp(310px, 88vw, 490px); }
+  .split__media::after { display: none; }
+  .split__badge { right: 12px; bottom: 12px; max-width: 180px; padding: 18px; }
+  .check-list { margin: 28px 0; }
+
+  .stats { grid-template-columns: 1fr; }
+  .stat { padding: 30px 20px; }
+  .stat + .stat { border-top: 1px solid var(--gf-line); border-left: 0; }
+
+  .partner { grid-template-columns: minmax(0, 1fr); }
+  .partner__mark,
+  .partner__content {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .partner__content .section-title {
+    max-width: 100%;
+    font-size: clamp(1.6rem, 7.35vw, 3rem);
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+  .partner__mark { min-height: 250px; padding: 30px; }
+  .partner__mark strong { font-size: 4.4rem; }
+  .partner__content { padding: 36px 26px; }
+
+  .product-card__visual { height: 210px; }
+  .product-card__body { padding: 24px; }
+
+  .faq-wrap { grid-template-columns: 1fr; gap: 34px; }
+  .accordion-button {
+    min-height: 70px;
+    padding: 20px 18px;
+    color: #f3f1ea !important;
+    font-size: .97rem;
+    line-height: 1.45;
+  }
+  .accordion-button:not(.collapsed) { color: var(--gf-orange) !important; }
+  .accordion-body {
+    padding: 20px 18px 24px;
+    color: #c9cdd1 !important;
+    background: #08090a;
+    font-size: .94rem;
+  }
+
+  .cta-section { padding: 68px 0; }
+  .cta-box { align-items: stretch; flex-direction: column; gap: 28px; }
+  .cta-box h2 { font-size: clamp(2.35rem, 10vw, 4rem); }
+  .cta-box .btn-gf { width: 100%; }
+
+  .footer__main { grid-template-columns: 1fr; gap: 36px; padding: 54px 0; }
+  .footer__about { grid-column: auto; }
+  .floating-whatsapp { right: 16px; bottom: 16px; width: 56px; height: 56px; }
+  .back-top { right: 22px; bottom: 84px; }
+}
+
+@media (max-width: 420px) {
+  .container-gf { width: calc(100% - 26px); max-width: calc(100% - 26px); }
+  .brand__name { max-width: 145px; font-size: .82rem; }
+  .hero__media,
+  body[data-page="inicio"] .hero__media { height: 260px; }
+  .hero h1 { font-size: clamp(2.15rem, 10.2vw, 2.75rem); line-height: .94; }
+  .section-title { font-size: clamp(2.2rem, 11vw, 3.2rem); }
+  .btn-gf { padding-inline: 20px; }
+}
+
+/* Faixa de transição entre tablet e desktop: evita compressão do CTA. */
+@media (min-width: 992px) and (max-width: 1100px) {
+  .cta-box {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .cta-box .btn-gf { min-width: 240px; }
+}
