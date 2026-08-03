@@ -242,6 +242,8 @@
   body[data-page="inicio"] .hero__media { height: 260px; }
   .hero h1 { font-size: clamp(2.15rem, 10.2vw, 2.75rem); line-height: .94; }
   .section-title { font-size: clamp(2.2rem, 11vw, 3.2rem); }
+  body[data-page="cerca-eletrica"] .section-title,
+  body[data-page="cerca-eletrica"] .cta-box h2 { font-size: 1.95rem; }
   .btn-gf { padding-inline: 20px; }
 }
 

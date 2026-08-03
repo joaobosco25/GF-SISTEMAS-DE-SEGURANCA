@@ -1,0 +1,25 @@
+GF SISTEMAS DE SEGURANÇA — SITE ESTÁTICO
+
+Páginas incluídas:
+- index.html
+- cameras-e-alarmes.html
+- motor-de-portao.html
+- concertina.html
+- cerca-eletrica.html
+- eletricista.html
+
+Como visualizar:
+1. Extraia todo o conteúdo do ZIP.
+2. Abra o arquivo index.html em seu navegador.
+
+Tecnologias:
+- HTML5 semântico
+- CSS3 responsivo
+- JavaScript puro
+- Bootstrap 5.3.8 local
+- Tailwind CSS 4.2.1 compilado localmente
+- Bootstrap Icons local
+
+O projeto não depende de WordPress, banco de dados ou CDN para funcionar.
+Os botões de orçamento direcionam para o WhatsApp informado no site original:
+(34) 99341-6150.
